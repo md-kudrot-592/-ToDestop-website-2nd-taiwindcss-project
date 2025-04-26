@@ -1,0 +1,71 @@
+<!doctype html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="./output.css" rel="stylesheet">
+
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet" />
+</head>
+
+<body>
+  <!-- Navabar -->
+  <nav class="p-3 flex bg-white justify-between items-center">
+    <a href="#" id="brand" class="flex items-center ">
+      <img class="object-cover max-w-12 max-h-12"
+        src="https://anuj-kumar-sharma.github.io/tailwind-landing-page/assets/asset%200.png" alt="logo">
+      <span class="text-lg font-medium font-display">ToDestop</span>
+    </a>
+
+    <div id="nav-menu" class="hidden lg:flex gap-12">
+      <a href="#" class="font-medium hover:text-primary"> Pricing</a>
+      <a href="#" class="font-medium hover:text-primary"> Docs</a>
+      <a href="#" class="font-medium hover:text-primary"> Changelog</a>
+      <a href="#" class="font-medium hover:text-primary"> Blogs</a>
+      <a href="#" class="font-medium hover:text-primary"> Login</a>
+    </div>
+
+    <button class="hidden lg:block">
+      <span class="flex gap-2 items-center border border-gray-500 px-6 py-2 rounded-lg hover:border-gray-600">
+        <img src="https://anuj-kumar-sharma.github.io/tailwind-landing-page/assets/asset%201.svg" alt="Electron logo">
+        Electron Developers
+        <i class="ri-arrow-right-line"></i></span>
+    </button>
+    <button class="p-2 lg:hidden" onclick="handleMenu()">
+      <i class="ri-menu-line"></i>
+    </button>
+
+    <div id="nav-dialog" class="hidden fixed bg-white inset-0 z-10 md:hidden">
+      <div id="nav-bar" class="flex justify-between p-3">
+        <a href="#" id="brand" class="flex items-center ">
+          <img class="object-cover max-w-12 max-h-12"
+            src="https://anuj-kumar-sharma.github.io/tailwind-landing-page/assets/asset%200.png" alt="logo">
+          <span class="text-lg font-medium font-display">ToDestop</span>
+        </a>
+        <button class="p-2 lg:hidden bg-white" onclick="handleMenu()">
+          <i class="ri-close-line"></i>
+        </button> 
+      </div>
+      <div class="mt-6">
+        <a href="#" class="font-medium m-3 p-3 hover:bg-gray-200 block rounded-lg">Pricing</a>
+        <a href="#" class="font-medium m-3 p-3 hover:bg-gray-200 block rounded-lg">Docs</a>
+        <a href="#" class="font-medium m-3 p-3 hover:bg-gray-200 block rounded-lg">Changelog</a>
+        <a href="#" class="font-medium m-3 p-3 hover:bg-gray-200 block rounded-lg">Blogs</a>
+        <a href="#" class="font-medium m-3 p-3 hover:bg-gray-200 block rounded-lg">Login</a>
+      </div>
+
+      <div class="h-[1px] bg-gray-300"></div>
+
+      <button class=" lg:block">
+        <span class=" mt-6 min-w-screen flex gap-2 items-center px-6 py-4 rounded-lg hover:bg-gray-200">
+          <img src="https://anuj-kumar-sharma.github.io/tailwind-landing-page/assets/asset%201.svg" alt="Electron logo">
+          Electron Developers
+      </button>
+    </div>
+
+  </nav>
+  <script src="script.js"></script>
+</body>
+
+</html>
