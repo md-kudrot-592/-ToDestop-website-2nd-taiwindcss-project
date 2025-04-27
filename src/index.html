@@ -7,18 +7,19 @@
   <link href="./output.css" rel="stylesheet">
 
   <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" />
 </head>
 
 <body>
   <!-- Navabar -->
   <nav class="p-3 flex bg-white justify-between items-center">
-    <a href="#" id="brand" class="flex items-center ">
+    <a href="#" id="brand" class="flex flex-1 gap-2  items-center ">
       <img class="object-cover max-w-12 max-h-12"
         src="https://anuj-kumar-sharma.github.io/tailwind-landing-page/assets/asset%200.png" alt="logo">
-      <span class="text-lg font-medium font-display">ToDestop</span>
+      <span class="text-lg font-medium font-body">ToDestop</span>
     </a>
 
-    <div id="nav-menu" class="hidden lg:flex gap-12">
+    <div id="nav-menu" class="hidden lg:flex gap-12 flex-1">
       <a href="#" class="font-medium hover:text-primary"> Pricing</a>
       <a href="#" class="font-medium hover:text-primary"> Docs</a>
       <a href="#" class="font-medium hover:text-primary"> Changelog</a>
@@ -26,12 +27,14 @@
       <a href="#" class="font-medium hover:text-primary"> Login</a>
     </div>
 
-    <button class="hidden lg:block">
-      <span class="flex gap-2 items-center border border-gray-500 px-6 py-2 rounded-lg hover:border-gray-600">
-        <img src="https://anuj-kumar-sharma.github.io/tailwind-landing-page/assets/asset%201.svg" alt="Electron logo">
-        Electron Developers
-        <i class="ri-arrow-right-line"></i></span>
-    </button>
+    <div class=" flex justify-end flex-1">
+      <button class="hidden lg:block font-semibold">
+        <span class="flex gap-2 items-center border border-gray-500 px-6 py-2 rounded-lg hover:border-gray-600">
+          <img src="https://anuj-kumar-sharma.github.io/tailwind-landing-page/assets/asset%201.svg" alt="Electron logo">
+          Electron Developers
+          <i class="ri-arrow-right-line"></i></span>
+      </button>
+    </div>
     <button class="p-2 lg:hidden" onclick="handleMenu()">
       <i class="ri-menu-line"></i>
     </button>
@@ -45,7 +48,7 @@
         </a>
         <button class="p-2 lg:hidden bg-white" onclick="handleMenu()">
           <i class="ri-close-line"></i>
-        </button> 
+        </button>
       </div>
       <div class="mt-6">
         <a href="#" class="font-medium m-3 p-3 hover:bg-gray-200 block rounded-lg">Pricing</a>
@@ -65,7 +68,44 @@
     </div>
 
   </nav>
-  <script src="script.js"></script>
+  <!-- Mian -->
+  <main>
+    <!-- Hero Section -->
+    <div id="hero" class="min-h-screen bg-gradient-to-br from-purple-50 via-orange-50 to transparent  ">
+      <div id="hero-container" class="max-w-4xl mx-auto px-6 pb-32 pt-6 flex sm:items-center sm:text-center flex-col sm:pt-12">
+        <div id="vertion-text" class="flex my-6 gap-2 items-center border border-yellow-300 bg-yellow-50 rounded-lg px-3 py-1 
+        w-fit shadow-md hover:-translate-y-1 transition group">
+          <div class="w-2 h-2 bg-amber-400 rounded-full  border-yellow-600 border"></div>
+          <p class="font-display font-medium text-yellow-600">v0.21.1: <span class="text-yellow-800">Find-in-page bug fixes</span></p>
+          <i class="ri-arrow-right-line text-yellow-600 group-hover:translate-x-1 transition duration-300"></i>
+        </div>
+        <div id="hero-features" class="sm:flex gap-8 my-6 hidden">
+          <div class="flex justify-center gap-2 items-center text-gray-500">
+            <i class="ri-file-code-line text-sm"></i>
+            <p>Code Optional</p>
+          </div>
+          <div class="flex justify-center gap-2 items-center text-gray-500">
+            <i class="fa-solid fa-hand-back-fist"></i>
+            <p>Drag & drop builder</p>
+          </div>
+          <div class="flex justify-center gap-2 items-center text-gray-500">
+            <i class="fa-solid fa-laptop"></i>
+            <p>Windows, Mac, Linux</p>
+          </div>
+
+        </div>
+        <h1 class="text-4xl font-semibold leading-snug mt-4 sm:text-7xl sm:leading-normal">Web app to desktop app in minutes</h1>
+        <p class="text-xl text-gray-800 mt-4 sm:text-2xl sm:mt-8">Take your web app codebase and transform it into a cross platform desktop app with native functionality.</p>
+        <div id="button-container" class="mt-12 flex flex-col gap-4 sm:flex-row ">
+          <button class="px-8 py-3 font-semibold rounded-lg text-white bg-primary shadow-sm hover:bg-opacity-90">Download now</button>
+          <button class="px-8 py-3 font-semibold rounded-lg bg-white border border-gray-400 shadow-sm hover:bg-opacity-90">Read Docs</button>
+        </div>
+      </div>
+    </div>
+  </main>
+
 </body>
+
+<script src="script.js"></script>
 
 </html>
